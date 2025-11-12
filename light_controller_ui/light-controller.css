@@ -1,0 +1,247 @@
+/* Light Controller Styles - Matching Tkinter UI */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme colors */
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Status Label */
+.status-label {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Power Button */
+.power-button {
+    font-size: 18px;
+    width: 200px;
+    height: 60px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.light-theme .power-button {
+    background-color: lightgrey;
+    color: black;
+}
+
+body.dark-theme .power-button {
+    background-color: grey;
+    color: white;
+}
+
+.power-button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.power-button:active {
+    transform: scale(0.95);
+}
+
+/* Control Section */
+.control-section {
+    margin: 30px 0;
+}
+
+.control-label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Brightness Slider */
+.brightness-slider {
+    width: 300px;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+body.light-theme .brightness-slider {
+    background: #ddd;
+}
+
+body.dark-theme .brightness-slider {
+    background: #555;
+}
+
+.brightness-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.light-theme .brightness-slider::-webkit-slider-thumb {
+    background: #666;
+}
+
+body.dark-theme .brightness-slider::-webkit-slider-thumb {
+    background: #ccc;
+}
+
+.brightness-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.brightness-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+}
+
+body.light-theme .brightness-slider::-moz-range-thumb {
+    background: #666;
+}
+
+body.dark-theme .brightness-slider::-moz-range-thumb {
+    background: #ccc;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-button {
+    width: 90px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.light-theme .color-button {
+    background-color: lightgrey;
+    color: black;
+}
+
+body.dark-theme .color-button {
+    background-color: grey;
+    color: white;
+}
+
+.color-button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.color-button:active {
+    transform: translateY(0);
+}
+
+/* Mode Section */
+.mode-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mode-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.light-theme .mode-button {
+    background-color: lightgrey;
+    color: black;
+}
+
+body.dark-theme .mode-button {
+    background-color: grey;
+    color: white;
+}
+
+.mode-button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.mode-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+    
+    .brightness-slider {
+        width: 90%;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .color-button {
+        width: 150px;
+    }
+    
+    .mode-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mode-button {
+        width: 150px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Light Controller</title>
+    <link rel="stylesheet" href="light-controller.css">
+</head>
+<body class="light-theme">
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Smart Light Controller</h1>
+
+        <!-- Light Status -->
+        <div class="status-label" id="lightStatus">Light: OFF</div>
+
+        <!-- Power Button -->
+        <button class="power-button" id="powerButton">Turn ON</button>
+
+        <!-- Brightness Control -->
+        <div class="control-section">
+            <label class="control-label" id="brightnessLabel">Brightness: 50%</label>
+            <input type="range" 
+                   class="brightness-slider" 
+                   id="brightnessSlider" 
+                   min="0" 
+                   max="100" 
+                   value="50">
+        </div>
+
+        <!-- Color Control -->
+        <div class="control-section">
+            <label class="control-label" id="colorLabel">Color: Warm</label>
+            <div class="button-group">
+                <button class="color-button" data-color="warm">Warm</button>
+                <button class="color-button" data-color="natural">Natural</button>
+                <button class="color-button" data-color="cool">Cool</button>
+            </div>
+        </div>
+
+        <!-- Mode Buttons -->
+        <div class="mode-section">
+            <button class="mode-button" id="themeButton">Night Mode</button>
+            <button class="mode-button" id="autoButton">Auto Mode</button>
+        </div>
+    </div>
+
+    <script src="light-controller.js"></script>
+</body>
+</html>
